@@ -1,0 +1,97 @@
+.User-msg {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 15vw;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.Ai-msg {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 15vw;
+    align-items: flex-start;
+}
+
+img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.dot-typing {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+    0% {
+        box-shadow: 9984px 0 0 0 #f88e8e, 9999px 0 0 0 #f88e8e, 10014px 0 0 0 #f88e8e;
+    }
+
+    16.667% {
+        box-shadow: 9984px -10px 0 0 #ecb977, 9999px 0 0 0 #ecb977, 10014px 0 0 0 #ecb977;
+    }
+
+    33.333% {
+        box-shadow: 9984px 0 0 0 #d1e697, 9999px 0 0 0 #d1e697, 10014px 0 0 0 #d1e697;
+    }
+
+    50% {
+        box-shadow: 9984px 0 0 0 #98d8e7, 9999px -10px 0 0 #98d8e7, 10014px 0 0 0 #98d8e7;
+    }
+
+    66.667% {
+        box-shadow: 9984px 0 0 0 #a79ef1, 9999px 0 0 0 #a79ef1, 10014px 0 0 0 #a79ef1;
+    }
+
+    83.333% {
+        box-shadow: 9984px 0 0 0 #df90d8, 9999px 0 0 0 #df90d8, 10014px -10px 0 0 #df90d8;
+    }
+
+    100% {
+        box-shadow: 9984px 0 0 0 #e98d93, 9999px 0 0 0 #e98d93, 10014px 0 0 0 #e98d93;
+    }
+}
+
+.chat-bubble {
+    position: relative;
+}
+
+.chat-bubble:after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-top: 0;
+    margin-top: -12px;
+}
+
+.chat-bubble--Ai-Normal:after {
+    left: 0;
+    border-right-color: #F2F2F2;
+    border-left: 0;
+    margin-left: -15px;
+}
+
+.chat-bubble--Ai-info:after {
+    left: 0;
+    border-right-color: #FFE5E5;
+    border-left: 0;
+    margin-left: -15px;
+}
+
+.chat-bubble--User:after {
+    right: 0;
+    border-left-color: #E6FAFD;
+    border-right: 0;
+    margin-right: -15px;
+}
